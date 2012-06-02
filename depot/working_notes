@@ -1,0 +1,43 @@
+Notes:
+ON DEPOT B
+class Product < ActiveRecord::Base
+  # this attr_accessible seems new
+  attr_accessible :description, :image_url, :price, :title
+  validates :title, :description, :image_url, presence: true
+  # using 0.01 because database stores 0.001 as zero any
+  validates :price, numericality: {greater_than_or_equal_to: 0.01}
+  validates :title, uniqueness: true
+  validates :image_url, allow_blank: true, format: {
+	with: %r{\.(gif|jpg|png)$}i,
+	message: 'must be a URL for GIF, JPG or PNG image.'
+  }
+end
+
+ON DEPOT B
+unit tests output does not show which tests are run, unlike in the book 
+ON DEPOT B
+base name of the YAML file must match the name of database table
+
+DEPOT D
+changing the root on config/routes.rb; need to delete the defauly public/index.html
+
+root :to => 'store#index', as: 'store' (the latter tells Rails to create a store_path variable (we saw this with say_goodbye_path)
+
+ON DEPOT E:
+view-source:http://media.pragprog.com/titles/rails4/code/rails32/depot_e/app/views/layouts/application.html.erb
+
+application.html.erb is a layout used for all views for all controllers that don't otherwise provide a layout
+
+ON DEPOT E:
+CSS selector notation: if starts with a number sign (#) match on id attributes; if . (dot) match on class attributes, else elements name
+
+ON DEPOT E:
+
+one final point before we move on: both validation and functional tests will
+test the behavior of controllers only; they will not retroactively affect any
+objects that already exist in the database or in fixtures. In the previous example,
+two products contain the same title. Such data will cause no problems
+and will go undetected up to the point where such records are modified and
+saved.
+
+SCSS commments  /*added by me*/
