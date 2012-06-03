@@ -48,11 +48,12 @@ class LineItemsController < ApplicationController
 
    #build causes a new line item relationship to be built between the @cart object and the product
    #ebook had (product: product), which caused mass assignment problem
-  @line_item = @cart.line_items.build(product_id: product.id)
+   #@line_item = @cart.line_items.build(product_id: product.id)
+   @line_item = @cart.add_product(product.id)
 
     respond_to do |format|
       if @line_item.save
-        format.html { redirect_to @line_item.cart, notice: 'Line item was successfully created.' }
+        format.html { redirect_to @line_item.cart }
         format.json { render json: @line_item, status: :created, location: @line_item }
       else
         format.html { render action: "new" }

@@ -47,7 +47,9 @@ class LineItemsController < ApplicationController
   #@line_item = LineItem.new(params[:line_item])
 
    #build causes a new line item relationship to be built between the @cart object and the product
-  @line_item = @cart.line_items.build(product_id: product.id)
+   #ebook had (product: product), which caused mass assignment problem
+   #@line_item = @cart.line_items.build(product_id: product.id)
+   @line_item = @cart.add_product(product.id)
 
     respond_to do |format|
       if @line_item.save

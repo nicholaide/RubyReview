@@ -60,5 +60,17 @@ default_scope :order => 'title'
 
 
 ON DEPOT g:
-error on line_items_controller_test.rb, see discussion on website. also, update test is different in 
+error on line_items_controller_test.rb, see discussion on website (http://forums.pragprog.com/forums/148/topics/10565). This is due to mass assignment problem. also, update test is different in 
 generated script that on site, those in # are from site
+
+ON DEPOT g:
+
+line_items.find_by_product_id(product_id)
+
+But we don’t define a method with that name. However, Active Record notices the call to an undefined method and spots that it starts with the string find_by and ends with the name of a column.
+It then dynamically constructs a finder method for us, adding it to our class
+
+E2: handling errors
+deal with errors and error reporting, Rails uses structure called flash. Flash info is accessible within views
+Also, can't use instance var because we have now moved on to new requests. Flash is stored in session
+
