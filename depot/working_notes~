@@ -74,3 +74,19 @@ E2: handling errors
 deal with errors and error reporting, Rails uses structure called flash. Flash info is accessible within views
 Also, can't use instance var because we have now moved on to new requests. Flash is stored in session
 
+
+error logs are in development.log in the log directory
+
+
+PATH vs URL
+use URL for redirection
+
+ON F1:
+you can pass a collection to the method that renders partial templates
+
+ON DEPOT L:
+add remote: true for Ajax calls
+ error on book: $('#cart').html("<%= j(render(@cart)) %>"); NOT $('#cart').html("<%j render @cart %>");
+see http://stackoverflow.com/questions/10148134/rails-3-2-2-not-executing-rjs and http://api.rubyonrails.org/classes/ActionView/Helpers/JavaScriptHelper.html#method-i-escape_javascript
+
+

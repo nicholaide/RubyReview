@@ -15,13 +15,18 @@
 <!-- START_HIGHLIGHT -->
   <div id="banner">
     <%= image_tag("logo.png") %>
-    <%= @page_title || "Pragmatic Bookshelf" %><!-- <label id="code.depot.e.title"/> -->
+    <%= @page_title || "Cherise's Bookshelf" %><!-- <label id="code.depot.e.title"/> -->
   </div>
   <div id="columns">
     <div id="side">
-     <%= Time.now %> 
+     <!--<%= Time.now %> 
      <br/> 
-     <%= pluralize(session[:counter], "time") %> 
+     <%= pluralize(session[:counter], "time") %> -->
+
+     <div id="cart">
+       <%= render @cart %>
+     </div>
+
       <ul>
         <li><a href="http://www....">Home</a></li>
         <li><a href="http://www..../faq">Questions</a></li>

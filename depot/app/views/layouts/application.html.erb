@@ -19,9 +19,14 @@
   </div>
   <div id="columns">
     <div id="side">
-     <%= Time.now %> 
+     <!--<%= Time.now %> 
      <br/> 
-     <%= pluralize(session[:counter], "time") %> 
+     <%= pluralize(session[:counter], "time") %> -->
+
+      <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+        <%= render @cart %>
+      <% end %>
+
       <ul>
         <li><a href="http://www....">Home</a></li>
         <li><a href="http://www..../faq">Questions</a></li>
