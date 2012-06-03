@@ -19,7 +19,8 @@
   </div>
   <div id="columns">
     <div id="side">
-     <<%= Time.now %> color: #bfb/>
+     <%= Time.now %> 
+     <%= pluralize(session[:counter], "time") %> 
       <ul>
         <li><a href="http://www....">Home</a></li>
         <li><a href="http://www..../faq">Questions</a></li>

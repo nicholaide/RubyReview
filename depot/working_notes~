@@ -39,3 +39,26 @@ objects that already exist in the database or in fixtures. In the previous examp
 two products contain the same title. Such data will cause no problems
 and will go undetected up to the point where such records are modified and
 saved.
+
+SCSS commments  /*added by me*/
+
+ON DEPOT F:
+if a table has foreign keys, the corresponding  model should have a belongs_to for each
+
+
+side note:
+
+new ebook uses the order in store, while the 3.0 version uses default_scope in products.rb
+class StoreController < ApplicationController
+  def index
+	@products = Product.order(:title)
+  end
+end
+
+class Product < ActiveRecord::Base
+default_scope :order => 'title'
+
+
+ON DEPOT g:
+error on line_items_controller_test.rb, see discussion on website. also, update test is different in 
+generated script that on site, those in # are from site
