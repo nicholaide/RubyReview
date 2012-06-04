@@ -101,3 +101,11 @@ bunch of fixes on occured while testing using rake:test, before the ajax testing
 
 ON before iteration G: not sure how all the Ajax works, need to pick up jQuery and CoffeeScript
 
+
+ON iteration G: did migration, no failure on rake:test. will change line_item model to have order_id as accessible
+
+aside: command for sqlite3 console is sqlite3 db/development.sqlite3 OR sqlite3 -line db/development.sqlite3
+. use .exit to quit
+
+ON DEPOT O own testing after adding form and css on order:
+changed order testing "should get new"  to  LineItem.create(cart_id: cart.id, product_id: products(:ruby).id)
