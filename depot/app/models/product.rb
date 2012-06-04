@@ -3,6 +3,7 @@ class Product < ActiveRecord::Base
   attr_accessible :description, :image_url, :price, :title
   
   has_many :line_items
+  has_many :orders, through: :line_items
 
   #see private method below for ensure_
   before_destroy :ensure_not_referenced_by_any_line_item

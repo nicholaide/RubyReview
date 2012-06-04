@@ -1,6 +1,7 @@
 Depot::Application.routes.draw do
 
-  resources :line_items
+
+  resources :orders
 
   resources :line_items do
      #member do
@@ -13,7 +14,9 @@ Depot::Application.routes.draw do
 
   get "store/index"
 
-  resources :products
+  resources :products do
+    get :who_boought, on: :member
+  end
 
 
 

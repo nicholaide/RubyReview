@@ -82,7 +82,6 @@ class ProductsController < ApplicationController
     end
   end
 
-  #for atom feeds
   def who_bought
     @product = Product.find(params[:id])
     respond_to do |format|

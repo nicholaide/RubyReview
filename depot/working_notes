@@ -109,3 +109,11 @@ aside: command for sqlite3 console is sqlite3 db/development.sqlite3 OR sqlite3 
 
 ON DEPOT O own testing after adding form and css on order:
 changed order testing "should get new"  to  LineItem.create(cart_id: cart.id, product_id: products(:ruby).id)
+
+ON DEPOT Q bundle install will also cross-check gem dependcies. Need to restart server when doing this.
+
+
+ONE DEPOT Q running a script: rails runner script/load_orders.rb
+
+To try later: remove the \/ button when placing an order, else cart disappers. Not sure if Rails can detect which page you are on...
+
