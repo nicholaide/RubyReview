@@ -96,3 +96,6 @@ table { border-collapse:collapse } in application.css.scss
 ON DEPOT N:
 coffee script works, but mouse does not change like in links
 
+ON DEPOT O:
+bunch of fixes on occured while testing using rake:test, before the ajax testing. see git's commit with comment "before Task F Ajax test"
+
