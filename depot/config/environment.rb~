@@ -13,7 +13,6 @@ Depot::Application.configure do
     domain: "domain.of.sender.net",
     authentication: "plain",
     user_name: "cmubrowserlab",
-    password: "supersecurepassword",
-    enable_starttles_auto: true
+    password: "supersecurepassword"
 }
 end
