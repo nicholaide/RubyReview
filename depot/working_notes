@@ -93,4 +93,6 @@ ON DEPOT M:
 highlighting works, but there is an issue with border being highlighted as well. solution is 
 table { border-collapse:collapse } in application.css.scss
 
+ON DEPOT N:
+coffee script works, but mouse does not change like in links
 
