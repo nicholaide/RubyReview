@@ -121,3 +121,6 @@ ON DEPOT R: function testing email
 removed   <td><%= button_to 'V', decrement_line_item_path(line_item), method: :post, remote: true %></td> on _line_items.html.erb because test is complaining of some forgery
 also simplified the order_notifier_test to just "Ruby Programming Language"; removed text from shipped.text.rb
 
+ON DEPOT R: Iter I authentication
+ has_secure_password in model enables validation that the passwords typed match
+

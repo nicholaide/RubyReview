@@ -1,5 +1,15 @@
 Depot::Application.routes.draw do
 
+  get 'admin' => 'admin#index'
+
+  #replaced URL with login or logout
+  controller :sessions do
+    get 'login' => :new
+    post 'login' => :create
+    delete 'logout' => :destroy
+  end
+
+
 
   resources :users
 

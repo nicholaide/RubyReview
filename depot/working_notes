@@ -124,3 +124,7 @@ also simplified the order_notifier_test to just "Ruby Programming Language"; rem
 ON DEPOT R: Iter I authentication
  has_secure_password in model enables validation that the passwords typed match
 
+ON DEPOT R: form_tag = This style
+of form allows us to associate values in the params structure directly with form
+fields—no model object is required
+

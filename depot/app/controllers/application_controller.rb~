@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  
+  before_filter :authorize
   protect_from_forgery
 
   #only available to controllers
@@ -11,6 +13,14 @@ class ApplicationController < ActionController::Base
 	  session[:cart_id] = cart.id
 	  #return new cart
 	  cart
+	end
+
+	def increment_counter
+  	  if session[:counter].nil?
+	    session[:counter] = 0
+       	  end
+	  
+          session[:counter] += 1
 	end
 
 end
