@@ -4,24 +4,24 @@ Run options:
 
 ....
 
-Finished tests in 0.771112s, 5.1873 tests/s, 27.2334 assertions/s.
+Finished tests in 0.245320s, 16.3052 tests/s, 85.6025 assertions/s.
 
 4 tests, 21 assertions, 0 failures, 0 errors, 0 skips
 Run options: 
 
 # Running tests:
 
-..................................
+.........................................
 
-Finished tests in 1.320044s, 25.7567 tests/s, 46.9681 assertions/s.
+Finished tests in 2.126745s, 19.2783 tests/s, 33.8545 assertions/s.
 
-34 tests, 62 assertions, 0 failures, 0 errors, 0 skips
+41 tests, 72 assertions, 0 failures, 0 errors, 0 skips
 Run options: 
 
 # Running tests:
 
 .
 
-Finished tests in 0.789724s, 1.2663 tests/s, 25.3253 assertions/s.
+Finished tests in 0.808904s, 1.2362 tests/s, 24.7248 assertions/s.
 
 1 tests, 20 assertions, 0 failures, 0 errors, 0 skips
