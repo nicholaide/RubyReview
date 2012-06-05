@@ -115,5 +115,5 @@ ON DEPOT Q bundle install will also cross-check gem dependcies. Need to restart 
 
 ONE DEPOT Q running a script: rails runner script/load_orders.rb
 
-To try later: remove the \/ button when placing an order, else cart disappers. Not sure if Rails can detect which page you are on...
+To try later: remove the \/ button when placing an order, else cart disappers. Not sure if Rails can detect which page you are on.
 
