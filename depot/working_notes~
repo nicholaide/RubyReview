@@ -124,3 +124,13 @@ also simplified the order_notifier_test to just "Ruby Programming Language"; rem
 ON DEPOT R: Iter I authentication
  has_secure_password in model enables validation that the passwords typed match
 
+ON DEPOT R: form_tag = This style
+of form allows us to associate values in the params structure directly with form
+fields—no model object is required
+
+ON Iter K:
+problems with starting apache, no need for listen 80 or namevirtualhost on apache2.conf.some other config files must have defined it. also, i am able to bind to port 80. httpd does not seem to be a service anymore in apache2. in the future, check  sites-enabled in the /etc/apache2 folder. to restart apache2 to do this: sudo /etc/init.d/apache2 restart.
+needed to add RailsEnv development to the apache config
+had to change sites-enabled from 80 to 8080 to make site work
+
+
