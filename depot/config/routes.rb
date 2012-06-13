@@ -5,6 +5,8 @@ Depot::Application.routes.draw do
 
   resources :orders
 
+  match '/users/sign_out' => 'devise/sessions#destroy', :as => 'destroy_user_session_path'
+
   resources :line_items do
      #member do
      #post 'decrement'

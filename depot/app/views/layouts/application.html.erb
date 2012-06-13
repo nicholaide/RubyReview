@@ -13,6 +13,17 @@
 <!-- END:head -->
 <body class="<%= controller.controller_name %>">
 <!-- START_HIGHLIGHT -->
+
+  <div id="user_nav">
+  <% if user_signed_in? %>
+     Signed in as <%= current_user.email %>. Not you?
+    <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+  <% else %>
+    <%= link_to "Sign up", new_user_registration_path %> or
+    <%= link_to "Sign in", new_user_session_path %>
+  <% end %>
+  </div>
+
   <div id="banner">
     <%= image_tag("logo.png") %>
     <%= @page_title || "Cherise's Bookshelf" %><!-- <label id="code.depot.e.title"/> -->
