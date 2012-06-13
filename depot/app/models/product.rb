@@ -1,4 +1,6 @@
 class Product < ActiveRecord::Base
+  resourcify
+ 
   # this attr_accessible seems new
   attr_accessible :description, :image_url, :price, :title
   

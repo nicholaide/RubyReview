@@ -1,6 +1,8 @@
 Depot::Application.routes.draw do
 
 
+  devise_for :users
+
   resources :orders
 
   resources :line_items do
