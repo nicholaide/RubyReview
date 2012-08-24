@@ -135,5 +135,6 @@ had to change sites-enabled from 80 to 8080 to make site work
 
 to run mysql mysql -u root -p
 
-
+to grant privileges
+http://dev.mysql.com/tech-resources/articles/mysql_intro.html#SECTION0001000000
 
