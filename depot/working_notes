@@ -133,8 +133,9 @@ problems with starting apache, no need for listen 80 or namevirtualhost on apach
 needed to add RailsEnv development to the apache config
 had to change sites-enabled from 80 to 8080 to make site work
 
-to run mysql mysql -u root -p
+to run mysql: mysql -u root -p
+to create database: create database [name]
 
 to grant privileges
 http://dev.mysql.com/tech-resources/articles/mysql_intro.html#SECTION0001000000
-
+grant ALL PRIVILEGES on adc.* to nicholai@localhost , where adc is the database name
